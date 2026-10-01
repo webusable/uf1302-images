@@ -3,6 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .video-container {
+                position: relative;
+                /* Proporción 16:9 */
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+                margin: 1rem auto;
+                border: none;
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+        </style>
         <title>Imágenes en HTML5</title>
     </head>
     <body>
@@ -43,6 +64,15 @@
                     <img src="assets/img/cocoparisienne-witchs-house_360_girada.webp" alt="" />
                     <figcaption style="text-align: center; color: gray"><span>Imagen girada 45º de </span><a href="https://pixabay.com/es/users/cocoparisienne-127419/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1635770" target="_blank">Anja</a><span> en </span><a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1635770" target="_blank">Pixabay</a></figcaption>
                 </figure>
+            </article>
+            <article>
+                <h2>Video de YouTube</h2>
+                <div class="video-container">
+                    <iframe width="600" height="752" src="https://www.youtube.com/embed/5py2FrsYePE" title="Configuración y uso de GitHub con Visual Studio Code en 15 minutos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <h3>Y ahora un audio</h3>
+                <audio src="https://www.w3schools.com/html/horse.ogg" controls></audio>
             </article>
         </main>
         <footer></footer>
